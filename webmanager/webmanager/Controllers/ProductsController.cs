@@ -18,7 +18,7 @@ namespace webmanager.Controllers
         {
             return View();
         }
-       
+
 
         public void GetAllProducts()
         {
@@ -37,28 +37,29 @@ namespace webmanager.Controllers
             Response.Write(result);
 
         }
-      
-        //public Product GetProductById(int id)
-        //{
-        //    var product = products.FirstOrDefault((p) => p.Id == id);
-        //    if (product == null)
-        //    {
-        //        throw new HttpResponseException(HttpStatusCode.NotFound);
-        //    }
-        //    return product;
-        //}
-        //public IEnumerable<Product> GetProductsByCategory(string category)
-        //{
-        //    return products.Where(
-        //        (p) => string.Equals(p.Category, category,
-        //            StringComparison.OrdinalIgnoreCase));
-        //}
-        //public string GetProductByPage(int pageSize, int pageIndex)
-        //{
-        //    var productssub = products.Skip(pageSize * (pageIndex - 1)).Take(pageSize);
-        //    var result = JsonConvert.SerializeObject(productssub);
-        //    return "fn(" + result + ")";
-        //}
+
+        public Product GetProductById(int id)
+        {
+            var dal = new ProductsDAL();
+           var product = products.FirstOrDefault((p) => p.Id == id);
+           if (product == null)
+           {
+               throw new HttpResponseException(HttpStatusCode.NotFound);
+           }
+           return product;
+        }
+        public IEnumerable<Product> GetProductsByCategory(string category)
+        {
+           return products.Where(
+               (p) => string.Equals(p.Category, category,
+                   StringComparison.OrdinalIgnoreCase));
+        }
+        public string GetProductByPage(int pageSize, int pageIndex)
+        {
+           var productssub = products.Skip(pageSize * (pageIndex - 1)).Take(pageSize);
+           var result = JsonConvert.SerializeObject(productssub);
+           return "fn(" + result + ")";
+        }
 
     }
 }

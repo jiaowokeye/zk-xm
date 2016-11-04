@@ -75,7 +75,6 @@ $(".regnow").on("click",function(){
                         },
                         success:function(data){
                             if(data){
-                                alert("注册成功");
                                 window.location="http://10.17.158.243:8099/httpview/html/login.html";
                             }
                         }
