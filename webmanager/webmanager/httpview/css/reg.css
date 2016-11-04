@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2016-11-04 11:32:44
 * @Last Modified by:   Marte
-* @Last Modified time: 2016-11-04 14:45:21
+* @Last Modified time: 2016-11-04 17:51:59
 */
 /*
 * @Author: Marte
@@ -16,6 +16,9 @@
 * {
   margin: 0;
   padding: 0; }
+
+#mid_right .teltitle {
+  display: none; }
 
 img {
   border: 0; }
@@ -177,7 +180,12 @@ ol, ul, li {
   font-size: 12px; }
 
 .teltitle {
-  color: #900; }
+  color: #900;
+  display: none; }
+
+.passtitle {
+  color: #900;
+  display: none; }
 
 .Strength {
   width: 100px;
@@ -185,7 +193,6 @@ ol, ul, li {
   color: #999; }
 
 .mid_right .telyz {
-  margin-top: 32px;
   width: 125px; }
 
 .mid_right .telyzb {

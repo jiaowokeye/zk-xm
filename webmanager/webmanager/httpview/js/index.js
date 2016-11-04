@@ -19,7 +19,6 @@ $(".hottopli").on("mouseenter",function(){
         if(index>2){
             index=0;
         }
-        console.log(index);
         $(".CarouselIndex li").removeClass("red");
         $(".CarouselIndex li:eq("+index+")").addClass("red");
         $(".Carousel").animate({left:-900*index}, 1000,function(){
@@ -32,7 +31,6 @@ $(".hottopli").on("mouseenter",function(){
             $(this).addClass("white").removeClass("none");
             $(".BannerTabSwitch .none").on("mouseenter",BannerTabSwitch);
             var index=$(this).index();
-            console.log(index);
             $(".banner_right div").addClass("hide");
             $(".banner_right div:eq("+index+")").removeClass("hide");
         }
