@@ -373,6 +373,7 @@ p,h1,h2,h3,h4,h5,h6,ul,li,ol,dl,dt,dd,input{
             border:3px solid #e31939;
             border-right:0;
             float:left;
+            outline: none;
          }
         .search form a{
             margin:0;
