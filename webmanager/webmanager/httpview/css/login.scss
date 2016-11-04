@@ -1,0 +1,206 @@
+/*
+* @Author: Marte
+* @Date:   2016-11-03 19:26:19
+* @Last Modified by:   Marte
+* @Last Modified time: 2016-11-03 21:29:25
+*/
+$red:#e31939;
+*{
+    margin: 0;
+    padding: 0;
+}
+img{
+    border:0;
+}
+ol, ul ,li{list-style: none;}
+$width:990px;
+$topY:95px;
+$midY:430px;
+#footer{
+    height:auto;
+}
+.footflo{
+    padding:10px 335px;
+    height:75px;
+}
+#wrap_top,#wrap_mid{
+    width:100%;
+    height:auto;
+    min-width:$width;
+}
+#top,#mid{
+    width:$width;
+    margin:0 auto;
+}
+#top{
+    height:$topY;
+    padding:12px 0;
+}
+#top .logobox{
+    display:block;
+    width:auto;
+    height:auto;
+    float:left;
+    margin:0 35px;
+}
+#top .logobg{
+    width:270px;
+    height:60px;
+    background:url("../img/logo1.jpg");
+    background-position:0 -2px;
+    background-repeat:no-repeat;
+}
+#top .welcome{
+    display:block;
+    float:left;
+    height:40px;
+    margin:10px 0;
+    border-left:1px solid #dddddd;
+    font-size:26px;
+    line-height:40px;
+    padding:0 15px;
+    font-weight:bold;
+}
+#top div{
+    float:right;
+    width:120px;
+    height:60px;
+}
+#top div span{
+    display:inline-block;
+    width:24px;
+    height:23px;
+    margin:37px 18px 0 18px;
+    float:left;
+}
+#top div a{
+    display:inline-block;
+    width:56px;
+    height:60px;
+    position:relative;
+}
+.weixin{
+    background:url("../img/login.png");
+    background-position:-123px -8px;
+}
+#top div a .wxbox{
+    position:absolute;
+    width:80px;
+    height:80px;
+    left:-10px;
+    bottom:-80px;
+}
+.weibo{
+    background:url("../img/login.png");
+    background-position:-64px -8px;
+}
+#mid{
+    height:$midY;
+    margin-top:30px;
+    position:relative;
+}
+#mid .mid_left{
+    width:605px;
+    height:430px;
+    float:left;
+    position:absolute;
+    left:-605px;
+}
+#mid .mid_right{
+    padding:40px;
+    width:300px;
+    height:370px;
+    right:-382px;
+    border:1px solid #ccc;
+    padding:20px 40px;
+    position:absolute;
+}
+#mid .mid_right .right_top{
+    position:absolute;
+    width:auto;
+    height:30px;
+    line-height:30px;
+    right:-1px;
+    top:-30px;
+    font-size:12px;
+}
+#mid .mid_right .right_top a{
+    color:$red;
+}
+#mid .mid_right .right_top a:hover{
+    text-decoration:underline;
+}
+.mid_right .user{
+    font-size:14px;
+    line-height:30px;
+}
+.mid_right span{
+    font-size:10px;
+    color:#666;
+    float:left;
+}
+.mid_right input{
+    width:300px;
+    height:38px;
+}
+.mid_right .logincheck{
+    width:auto;
+    height:auto;
+    margin-top:20px;
+    float:left;
+}
+.mid_right .jizhu{
+    margin-top:20px;
+}
+.mid_right .forget{
+    float:right;
+    margin-top:20px;
+    font-size:10px;
+    color:$red;
+}
+.mid_right .login{
+    margin:20px 0;
+    background:$red;
+    color:white;
+}
+.mid_right ul{
+    width:300px;
+    height:30px;
+
+}
+.mid_right ul li{
+     width:100px;
+     height:30px;
+     float:left;
+     text-align:center;
+}
+.mid_right ul li a{
+    display:inline-block;
+    height:23px;
+    line-height:23px;
+    font-size:10px;
+    color:#666;
+    float:left;
+}
+.mid_right ul li a:hover{
+    color:$red;
+}
+.mid_right ul li span{
+    margin-left:30px;
+    display:inline-block;
+    width:24px;
+    height:23px;
+    float:left;
+}
+.weixin1{
+    background:url("../img/login.png");
+    background-position:-170px -40px;
+}
+.qq{
+    background:url("../img/login.png");
+    background-position:-10px -40px;
+}
+.xinlang{
+    background:url("../img/login.png");
+    background-position:-63px -40px;
+}

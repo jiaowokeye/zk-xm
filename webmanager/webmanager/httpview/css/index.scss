@@ -1,0 +1,222 @@
+/*
+* @Author: Marte
+* @Date:   2016-11-02 10:25:11
+* @Last Modified by:   Marte
+* @Last Modified time: 2016-11-03 17:52:29
+*/
+$width:1210px;
+#wrap_hot{
+    width:100%;
+    min-width:$width;
+}
+#hot{
+    width:$width;
+    height:305px;
+    margin:0 auto;
+}
+
+$hotliY:54px;
+$hotliX:201px;
+$hotliY1:250px;
+$red:#e31939;
+.borderred{
+    border-bottom:2px solid $red;
+}
+#hot .hottop{
+    width:$width;
+    height:$hotliY;
+}
+#hot a:hover{
+    color:$red;
+}
+#hot .hottop li{
+    width:$hotliX;
+    height:$hotliY;
+    border-bottom:2px solid #ccc;
+    float:left;
+    text-align:center;
+}
+#hot .hottop .borderred{
+    border-bottom:2px solid $red;
+}
+#hot .hottop li a{
+    line-height:$hotliY;
+    font-size:12px;
+    font-weight:bold;
+}
+#hot .hottop .hottoplast{
+    border-bottom:$red 2px solid;
+    font-size:12px;
+    text-align:left;
+    color:$red;
+    width:$hotliX+4;
+}
+#hot .hottop .hottoplast i{
+    display:inline-block;
+    width:20px;
+    height:54px;
+    float:left;
+    background:url(../img/index.png);
+    background-position:0 -108px;
+}
+.hotsbox{
+    overflow:hidden;
+    width:$width;
+    height:$hotliY1;
+}
+#hot .hotbottom{
+    width:$width;
+    height:$hotliY1;
+    border-bottom:1px solid #ccc;
+}
+#hot .hotbottom .noneright{
+    border-right:0;
+}
+.shopbox{
+    width:171px;
+    height:auto;
+    float:left;
+    border-right:1px solid #e7e7e7;
+    padding:15px;
+    border-bottom:1px solid #e7e7e7;
+    position:relative;
+}
+.shopbox .imgbox{
+    width:171px;
+    height:160px;
+    overflow:hidden;
+}
+.shopbox .imgbox img{
+    width:100%;
+    height:auto;
+}
+.shopbox .shopname{
+    width:171px;
+    height:40px;
+    margin:0;
+    line-height:20px;
+    font-size:12px;
+}
+.shopbox .addcar{
+    position:absolute;
+    display:block;
+    width:30px;
+    height:30px;
+    background:url(../img/index.png);
+    right:20px;
+    bottom:10px;
+}
+.shopbox .shopoprice{
+    display:block;
+    height:31px;
+    text-decoration:line-through;
+    line-height:25px;
+}
+.shopbox .shopprice{
+    font-size:12px;
+}
+.shopbox .shopprice i{
+    color:$red;
+}
+#wrap_main{
+    width:100%;
+    min-width:1210px;
+    height:auto;
+}
+#main{
+    width:$width;
+    height:auto;
+    margin:0 auto;
+    position:relative;
+}
+#main .louti{
+    width:100px;
+    height:auto;
+    position:absolute;
+    left:-100px;
+    top:200px;
+}
+#main div{
+    width:$width;
+    height:615px;
+    position:relative;
+}
+#main div h4{
+    margin:0;
+    height:54px;
+    line-height:55px;
+    font-size:20px;
+    border-bottom:1px solid #e7e7e7;
+}
+#main div h4 span a:hover{
+    color:$red;
+}
+#main .maintabs{
+    width:auto;
+    position:absolute;
+    right:0;
+    top:20px;
+}
+#main .maintabs li{
+    text-align:center;
+    height:33px;
+    width:98px;
+    margin-left:10px;
+    float:left;
+    font-size:14px;
+    line-height:32px;
+    border:1px solid #e7e7e7;
+    border-bottom:0;
+    background:white;
+    z-index:1;
+}
+#main .maintabs li:hover{
+    border-color:blue;
+    height:34px;
+}
+/* main div height */
+$mainY:560px;
+#main .mainleft{
+    float:left;
+    border:0;
+    width:240px;
+    height:$mainY;
+    position:relative;
+}
+#main .mainleft div{
+    border:0;
+    width:240px;
+    height:$mainY/2;
+    float:left;
+}
+#main .mainbull{
+    width:210px;
+    height:auto;
+    margin:30px auto;
+}
+#main .mainbull li{
+    padding-top:20px;
+    width:58px;
+    float:left;
+    height:38px;
+    margin:5px;
+    border-radius:50%;
+    font-size:12px;
+    background:white;
+    text-align:center;
+    border:1px solid white;
+}
+.mainleft2 img{
+    width:240px;
+    height:$mainY/2;
+}
+.mainshop{
+    width:808px;
+    height:$mainY;
+    float:left;
+}
+#main .shopbox .imgbox{
+    width:171px;
+    height:160px;
+    overflow:hidden;
+}

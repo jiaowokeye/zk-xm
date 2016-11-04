@@ -1,0 +1,137 @@
+/*
+* @Author: Marte
+* @Date:   2016-11-04 11:32:44
+* @Last Modified by:   Marte
+* @Last Modified time: 2016-11-04 11:37:57
+*/
+/*
+* @Author: Marte
+* @Date:   2016-11-03 19:26:19
+* @Last Modified by:   Marte
+* @Last Modified time: 2016-11-03 21:29:25
+*/
+* {
+  margin: 0;
+  padding: 0; }
+
+img {
+  border: 0; }
+
+ol, ul, li {
+  list-style: none; }
+
+#footer {
+  height: auto; }
+
+.footflo {
+  padding: 10px 335px;
+  height: 75px; }
+
+#wrap_top, #wrap_mid {
+  width: 100%;
+  height: auto;
+  min-width: 990px; }
+
+#top, #mid {
+  width: 990px;
+  margin: 0 auto; }
+
+#top {
+  height: 95px;
+  padding: 12px 0; }
+
+#top .logobox {
+  display: block;
+  width: auto;
+  height: auto;
+  float: left;
+  margin: 0 35px; }
+
+#top .logobg {
+  width: 270px;
+  height: 60px;
+  background: url("../img/logo1.jpg");
+  background-position: 0 -2px;
+  background-repeat: no-repeat; }
+
+#top .welcome {
+  display: block;
+  float: left;
+  height: 40px;
+  margin: 10px 0;
+  border-left: 1px solid #dddddd;
+  font-size: 26px;
+  line-height: 40px;
+  padding: 0 15px;
+  font-weight: bold; }
+
+#top div {
+  float: right;
+  width: 120px;
+  height: 60px; }
+
+#top div span {
+  display: inline-block;
+  width: 24px;
+  height: 23px;
+  margin: 37px 18px 0 18px;
+  float: left; }
+
+#top div a {
+  display: inline-block;
+  width: 56px;
+  height: 60px;
+  position: relative; }
+
+.weixin {
+  background: url("../img/login.png");
+  background-position: -123px -8px; }
+
+#top div a .wxbox {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: -10px;
+  bottom: -80px; }
+
+.weibo {
+  background: url("../img/login.png");
+  background-position: -64px -8px; }
+
+#mid {
+  height: 430px;
+  margin-top: 30px;
+  position: relative; }
+
+#mid .mid_left {
+  width: 605px;
+  height: 500px;
+  float: left;
+  position: absolute;
+  left: -605px; }
+
+#mid .mid_right {
+  padding: 40px;
+  width: 300px;
+  height: 370px;
+  right: -382px;
+  border: 1px solid #ccc;
+  padding: 20px 40px;
+  position: absolute; }
+
+#mid .mid_right .right_top {
+  position: absolute;
+  width: auto;
+  height: 30px;
+  line-height: 30px;
+  right: -1px;
+  top: -30px;
+  font-size: 12px; }
+
+#mid .mid_right .right_top a {
+  color: #e31939; }
+
+#mid .mid_right .right_top a:hover {
+  text-decoration: underline; }
+
+/*# sourceMappingURL=reg.css.map */
