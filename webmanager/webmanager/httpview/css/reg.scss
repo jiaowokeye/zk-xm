@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2016-11-04 11:32:44
 * @Last Modified by:   Marte
-* @Last Modified time: 2016-11-04 11:37:57
+* @Last Modified time: 2016-11-04 14:45:21
 */
 /*
 * @Author: Marte
@@ -10,6 +10,9 @@
 * @Last Modified by:   Marte
 * @Last Modified time: 2016-11-03 21:29:25
 */
+.hide{
+    display:none;
+}
 $red:#e31939;
 *{
     margin: 0;
@@ -135,4 +138,84 @@ $midY:430px;
 }
 #mid .mid_right .right_top a:hover{
     text-decoration:underline;
+}
+#mid .mid_right .right_topul{
+    position:absolute;
+    width:270px;
+    height:30px;
+    line-height:30px;
+    left:-1px;
+    top:-30px;
+    font-size:12px;
+
+}
+#mid .mid_right .right_topul li{
+    width:131px;
+    height:28px;
+    line-height:30px;
+    text-align:center;
+    margin-right:2px;
+    background:white;
+    float:left;
+    font-size:12px;
+}
+#mid .mid_right .right_topul .topli{
+    border:1px solid #ccc;
+    height:29px;
+    border-bottom:0;
+}
+.topli a{
+    color:$red;
+}
+.mid_right input{
+    width:295px;
+    height:35px;
+    border:0;
+    border:1px solid #ccc;
+}
+.mid_right span{
+    display:inline-block;
+    height:32px;
+    line-height:32px;
+    font-size:12px;
+}
+.teltitle{
+    color:#900;
+}
+.Strength{
+    width:100px;
+    text-align:center;
+    color:#999;
+}
+.mid_right .telyz{
+    margin-top:32px;
+    width:125px;
+}
+.mid_right .telyzb{
+    margin-left:10px;
+    text-align:center;
+    background:#e4393c;
+    color:white;
+    border:0;
+    height:37px;
+}
+.mid_right .logincheck {
+  width: auto;
+  height: auto;
+  margin-top: 20px;
+  float: left; }
+
+.mid_right .jizhu {
+  margin-top: 20px;
+  height:12px;
+  line-height:12px;
+  }
+.mid_right .jizhu a{
+    color:blue;
+}
+.mid_right .regnow{
+    margin-top:32px;
+    background:#e4393c;
+    color:white;
+    text-align:center;
 }
