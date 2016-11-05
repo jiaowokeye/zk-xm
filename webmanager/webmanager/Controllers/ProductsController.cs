@@ -19,14 +19,14 @@ namespace webmanager.Controllers
             return View();
         }
 
-
+        //可用
         public void GetAllProducts()
         {
             var dal = new ProductsDAL();
             var userdata = JsonConvert.SerializeObject(dal.getProductsByJson());
             Response.Write(userdata);
         }
-
+        //可用
         public void GetProductsByPage(int pagesize, int pageindex, string callback)
         {
             var dal = new ProductsDAL();
@@ -35,9 +35,8 @@ namespace webmanager.Controllers
             var userdata = JsonConvert.SerializeObject(productssub);
             var result = callback + "(" + userdata + ")";
             Response.Write(result);
-
         }
-
+        //不可用
         public Product GetProductById(int id)
         {
             var dal = new ProductsDAL();

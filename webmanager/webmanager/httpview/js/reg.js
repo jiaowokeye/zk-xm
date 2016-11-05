@@ -56,7 +56,7 @@ $(".password").on("blur",function(){
 })
 $(".regnow").on("click",function(){
     if(istrue){
-        var url="http://10.17.158.243:8099/User/CheckUserNameGet";
+        var url="../../../User/CheckUserNameGet";
         var uName=$(".midform").children(".user").val();
 
         var uPassword=$(".midform").children(".password").val();
@@ -67,7 +67,7 @@ $(".regnow").on("click",function(){
             async:false,
             success:function(data){
                 if(data==-1){
-                    url="http://10.17.158.243:8099/User/registerGet";
+                    url="../../../User/registerGet";
                     $.ajax(url,{
                         data:{
                             name:uName,
@@ -75,7 +75,7 @@ $(".regnow").on("click",function(){
                         },
                         success:function(data){
                             if(data){
-                                window.location="http://10.17.158.243:8099/httpview/html/login.html";
+                                window.location="login.html";
                             }
                         }
                     })

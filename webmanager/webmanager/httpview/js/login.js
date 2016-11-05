@@ -14,7 +14,7 @@ $(".login").on("click",function(){
     console.log(uName);
     var uPassword=$(".userPassword").val();
     console.log(uPassword);
-    var url="http://10.17.158.243:8099/User/loginGet";
+    var url="../../../User/loginGet";
     $.ajax(url,{
         data:{
             name:uName,
@@ -23,8 +23,8 @@ $(".login").on("click",function(){
         success:function(data){
             console.log(data);
             if(data==1){
-                alert("登录成功");
-                window.location="http://10.17.158.243:8099/httpview/index.html?name:"+uName;
+                document.cookie="name="+uName;
+                window.location="index.html";
             }else{
                 alert("用户名或者密码不正确");
             }

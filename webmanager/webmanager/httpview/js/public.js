@@ -30,12 +30,10 @@
             $("html,body").stop().animate({scrollTop:0},1000)
         });
 //用户名
-        var href=window.location.href;
-        var arr1=href.split("?");
-        if(arr1.length>1){
-            userName=arr1[arr1.length-1].split(":")[1];
-            console.log(userName);
-            $(".header_left").html("<li>欢迎光临本店!</li><li>用户：</li><li>"+userName+"</li>");
+        var str=document.cookie;
+        var name=str.split("=")[1];
+        if(name){
+            $(".header_left").html("<li>欢迎光临本店!</li><li>用户名：</li><li>"+name+"</li>");
         }
 //header 部分 li移入变色移出变回
         $("#header .drop-down").on("mouseenter",function(){
