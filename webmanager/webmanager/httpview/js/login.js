@@ -8,7 +8,7 @@ $(".weixin").on("mouseenter",function(){
 }).on("mouseleave",function(){
     $(".wxbox").addClass("hide");
 })
-//登录
+//登录账号
 $(".login").on("click",function(){
     var uName=$(".userName").val();
     console.log(uName);
@@ -23,7 +23,7 @@ $(".login").on("click",function(){
         success:function(data){
             console.log(data);
             if(data==1){
-                document.cookie="name="+uName;
+                document.cookie="name="+uName
                 window.location="index.html";
             }else{
                 alert("用户名或者密码不正确");
