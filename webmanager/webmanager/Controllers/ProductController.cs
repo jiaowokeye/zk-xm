@@ -33,7 +33,7 @@ namespace webmanager.Controllers
             }
         }
 
-        
+
         /// <summary>
         /// 分页获取数据
         /// </summary>
@@ -76,6 +76,7 @@ namespace webmanager.Controllers
         }
 
         [HttpGet]
+        //删除商品信息
         public void DeleteProductById_get(string id,string type, string callback)
         {
             var dal = new ProductDAL();

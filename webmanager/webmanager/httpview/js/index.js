@@ -59,18 +59,20 @@ $(".hottopli").on("mouseenter",function(){
             $(this).parent().siblings(".mainshop:eq("+index+")").addClass("ulcheak").removeClass("hide");
         })
         //添加购物车
-        $(".addcar").on("click",function(e){
+        $(".addcar").on("click",login);
+        function login(){
+            window.location="login.html";
+        }
+        function addCarClick(e){
             addCar(this);
             var e=e||window.event;
             var x=e.clientX;
             var y=e.clientY;
             var src=$(this).siblings().children().children("img").attr("src");
-            console.log(src);
             var div=document.createElement("div");
             $("body").append(div);
             $(div).css({"width":"170px","height":"170px","position":"fixed","left":x,"top":y}).html('<img src='+src+' alt="" />');
-            $(div).animate({"left":"100%","top":"45%"}, 1000,function(){
+            $(div).animate({"left":"100%","top":"45%","width":"50px","height":"50px"}, 1000,function(){
                 $(div).remove();
-                $(".shopcarli").children("span").html(id);
             })
-        })
+        }

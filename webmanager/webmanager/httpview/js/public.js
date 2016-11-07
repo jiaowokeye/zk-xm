@@ -1,4 +1,6 @@
 //侧边栏
+        var id=0;
+        var shopinf;
         $("#sideBar li").on("mouseenter",function(){
             $(this).children("div").removeClass("hide");
             $(this).on("mouseleave",function(){
@@ -43,11 +45,10 @@
                     password:uPass
                 },
                 success:function(data){
-                    console.log(data);
                     if(data==1){
                         document.cookie="name="+uName
                         getUser();
-
+                        getShopCar();
                     }else{
                         alert("用户名或者密码不正确");
                     }
@@ -60,6 +61,8 @@
            var str=document.cookie;
         if(str){
             name=str.split("=")[1];
+            $(".addcar").off("click",login);
+            $(".addcar").on("click",addCarClick);
             getShopCar();
             //ifcookie中找到用户名了 那么就在页面上显示已经登陆后的页面
             $(".header_left").html('<li>欢迎您回来'+name+'</li><li><a href="javascript:;">用户中心</a></li><li class="out"><a href="javascript:;">退出</li>');
@@ -77,6 +80,8 @@
                 $(".loginnow").on("click",loginnow);
                 $(".shopcarli").children('span').html("0");
                 getUser();
+                $(".addcar").off("click",addCarClick);
+                $(".addcar").on("click",login);
             });
         }else{
             $(".header_left").html('<li>欢迎光临本店!</li><li><a href="login.html">请登录</a></li><li><a href="reg.html">免费注册</a></li>')
@@ -100,7 +105,7 @@
                 $(this).css({"backgroundColor":"#e31939","color":"white"}).addClass("red").removeClass("nonered");
                 $(".search .nonered").on("click",searchClick);
             }
-var id;
+
 //从数据中获取此账户的购物车数据
 function getShopCar(){
     var url="../../../Product/GetProductsByPage_get";
@@ -112,17 +117,20 @@ function getShopCar(){
         },
         dataType:"json",
         success:function(data){
-            console.log(data);
+            shopinf=data;
             id=data.length;
-            $(".shopcarli").children("span").html(id);
-            if(id>0){
-                $(".cardiv").html('<ul class="shoplist "><li class="shoplistone"><span>共有<i>3</i>件商品</span><a href="javascript:;">去购物车结算</a></li></ul>');
-                $(".shoplist").html('<li class="shoplistone"><span>共有<i>'+id+'</i>件商品</span><a href="javascript:;">去购物车结算</a></li>');
+            console.log(data);
+            var length=data.length;
+            console.log(length);
+            $(".quality").html(length);
+            if(length>0){
+                $(".cardiv").html('<ul class="shoplist ">');
+                $(".shoplist").html('<li class="shoplistone"><span>共有<i>'+length+'</i>件商品</span><a href="javascript:;">去购物车结算</a></li>');
                 //简介购物车里只显示最新的三条数据
                 var start=Math.max(data.length-3,0);
-                for(var i=start;i<data.length;i++){
+                for(var i=data.length-1;i>=start;i--){
                     var obj=JSON.parse(data[i].Data)
-                    $(".shoplist").append('<li><img src='+obj.src+' alt=""><p>'+obj.name+'</p><p><a href="javascript:;"><b>'+obj.price+'</b>*<em>1</em></a></p></li>');
+                    $(".shoplist").append('<li><img src='+obj.src+' alt=""><p>'+obj.name+'</p><p><a href="javascript:;"><b>'+obj.price+'</b>*<em>'+obj.quality+'</em></a></p></li>');
                 }
             }
         }
@@ -130,20 +138,41 @@ function getShopCar(){
 }
 //添加到购物车函数  将选的那个加到数据库中
 function addCar(obj){
-    id++;
+    getShopCar();
     var shopname=$(obj).siblings().children(".shopname").html();
     var shopprice=$(obj).siblings(".shopprice").children("i").html();
     var src=$(obj).siblings().children().children("img").attr("src");
+    var iscz=false;
+    var quality=1;
+    var newId;
+    //判断以下数据里是否有它，如果有，让它的数量+1
+    if(shopinf.length>0){
+       for(var i=0;i<shopinf.length;i++){
+            var obj=JSON.parse(shopinf[i].Data)
+            if(obj.name==shopname){
+               quality=obj.quality+1;
+               newId=shopinf[i].Id.split("-")[1];
+               iscz=true;
+               break;
+            }
+        }
+    }
+    if(!iscz){
+        id++;
+        newId=id;
+    }
     var shop={
         name:shopname,
         price:shopprice,
-        src:src
+        src:src,
+        quality:quality
     }
     var url="../../../Product/CreateUpdateProduct_get";
     var data=JSON.stringify(shop);
+    console.log(data);
     $.ajax(url,{
         data:{
-            id:name+"-"+id,
+            id:name+"-"+newId,
             datajson: data,
             type:name
         },
